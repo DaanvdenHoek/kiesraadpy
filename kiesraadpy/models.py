@@ -6,8 +6,15 @@ from kiesraadpy.utils import parse_dutch_date_string
 
 
 class ElectionType(Enum):
+    EERSTE_KAMER = ('Eerste Kamer', 'EK')
     TWEEDE_KAMER = ('Tweede Kamer', 'TK')
     EUROPEES_PARLEMENT = ('Europees Parlement', 'EP')
+    PROVINCIALE_STATEN = ('Provinciale Staten', 'PS')
+    WATERSCHAP = ('Waterschap', 'WS')
+    EILANDSRAAD = ('Eilandsraad', 'ER')
+    KIESCOLLEGE = ('Kiescollege', 'KC')
+    GEMEENTERAAD = ('Gemeenteraad', 'GR')
+    NATIONAAL_REFERENDUM = ('Nationaal referendum', 'NR')
 
     @property
     def long(self):
