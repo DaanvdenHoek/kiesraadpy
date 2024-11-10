@@ -54,3 +54,8 @@ class ElectionIndexResult(BaseModel):
     @classmethod
     def parse_date(cls, v: str) -> datetime.date:
         return parse_dutch_date_string(v)
+
+    @field_validator('type', mode='before')
+    @classmethod
+    def parse_election_type(cls, v: str) -> ElectionType:
+        return ElectionType.from_long(v)
